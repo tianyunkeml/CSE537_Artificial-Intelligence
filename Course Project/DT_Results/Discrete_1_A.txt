@@ -1,0 +1,110 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     DISC1_EXP
+Instances:    98
+Attributes:   46
+              CaO+MgO
+              Al2O3
+              TiO2
+              Fe2O3*
+              MnO
+              MgO
+              CaO
+              Na2O
+              K2O
+              P2O5
+              S
+              Zn
+              Pb
+              Cu
+              Cd
+              Cr
+              Ni
+              Sc
+              V
+              Ba
+              Sr
+              Li
+              Rb
+              Y
+              Zr
+              Nb
+              Cs
+              La
+              Ce
+              Pr
+              Nd
+              Sm
+              Eu
+              Gd
+              Tb
+              Dy
+              Ho
+              Er
+              Tm
+              Yb
+              Lu
+              Hf
+              Ta
+              Th
+              U
+              Type de roche
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Al2O3 <= 0.000004
+|   Cd <= 0.000003
+|   |   MgO <= 0.00003: Chalcopyrites (2.0)
+|   |   MgO > 0.00003
+|   |   |   Li <= 0.000018: R. carbonat̩es (77.0)
+|   |   |   Li > 0.000018: Pyrite (4.0)
+|   Cd > 0.000003
+|   |   Cr <= 0.00002: Spahlerite (3.0)
+|   |   Cr > 0.00002: Gal̬ne (3.0)
+Al2O3 > 0.000004: S̩diments terrig̬nes (9.0)
+
+Number of Leaves  : 	6
+
+Size of the tree : 	11
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          93               94.898  %
+Incorrectly Classified Instances         5                5.102  %
+Kappa statistic                          0.8587
+Mean absolute error                      0.0173
+Root mean squared error                  0.1275
+Relative absolute error                 12.9823 %
+Root relative squared error             51.0194 %
+Total Number of Instances               98     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.048    0.987      1.000    0.994      0.970    0.998     0.999     R. carbonat̩es
+                 0.750    0.000    1.000      0.750    0.857      0.861    0.875     0.760     Pyrite
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.971     0.341     Chalcopyrites
+                 0.667    0.011    0.667      0.667    0.667      0.656    0.828     0.455     Gal̬ne
+                 0.667    0.011    0.667      0.667    0.667      0.656    0.828     0.455     Spahlerite
+                 1.000    0.022    0.818      1.000    0.900      0.894    0.993     0.881     S̩diments terrig̬nes
+Weighted Avg.    0.949    0.040    0.932      0.949    0.939      0.919    0.981     0.931     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 77  0  0  0  0  0 |  a = R. carbonat̩es
+  0  3  0  0  0  1 |  b = Pyrite
+  1  0  0  0  0  1 |  c = Chalcopyrites
+  0  0  0  2  1  0 |  d = Gal̬ne
+  0  0  0  1  2  0 |  e = Spahlerite
+  0  0  0  0  0  9 |  f = S̩diments terrig̬nes
+
